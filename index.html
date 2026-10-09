@@ -14,7 +14,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Mapacha home">
-      <span class="brand-mark" aria-hidden="true">M<span>✳</span></span>
+      <span class="brand-mark" aria-hidden="true">M</span>
       <span class="brand-name">MAPACHA<small>PAJE · ZANZIBAR</small></span>
     </a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
@@ -42,25 +42,56 @@
       <div class="section-title"><span></span><p class="eyebrow">MADE FOR SLOW, SUNNY DAYS</p><span></span></div>
       <h2>Coastal <em>favourites</em></h2>
       <p class="section-intro">A little something for every appetite. Find your favourite, then settle in and enjoy the moment.</p>
-      <div class="menu-grid">
-        <a class="dish-card" href="#reserve" data-category="Fresh seafood">
-          <img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=800&q=85" alt="Fresh seafood served with lemon and herbs" loading="lazy">
-          <span class="dish-name">From the sea</span><span class="dish-note">Fresh · bright · coastal</span>
-        </a>
-        <a class="dish-card" href="#reserve" data-category="Island flavours">
-          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85" alt="A colourful shared island-style meal" loading="lazy">
-          <span class="dish-name">Island flavours</span><span class="dish-note">Spiced · generous · made to share</span>
-        </a>
-        <a class="dish-card" href="#reserve" data-category="Grill favourites">
-          <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=85" alt="A meal fresh from the grill" loading="lazy">
-          <span class="dish-name">From the grill</span><span class="dish-note">Smoky · satisfying · full of flavour</span>
-        </a>
-        <a class="dish-card" href="#reserve" data-category="Something sweet">
-          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=85" alt="A sweet dessert topped with fresh fruit" loading="lazy">
-          <span class="dish-name">Something sweet</span><span class="dish-note">A lovely end to a lovely meal</span>
-        </a>
+      <p class="menu-disclaimer">SAMPLE MENU · DISHES AND PRICES BELOW ARE ILLUSTRATIVE PLACEHOLDERS, NOT MAPACHA'S CONFIRMED MENU.</p>
+      <div class="menu-tools">
+        <div class="menu-filters" role="group" aria-label="Filter menu by category">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="seafood" aria-pressed="false">Seafood</button>
+          <button class="filter-button" type="button" data-filter="swahili" aria-pressed="false">Swahili</button>
+          <button class="filter-button" type="button" data-filter="grill" aria-pressed="false">Grill</button>
+          <button class="filter-button" type="button" data-filter="vegetarian" aria-pressed="false">Vegetarian</button>
+          <button class="filter-button" type="button" data-filter="drinks" aria-pressed="false">Drinks</button>
+          <button class="filter-button" type="button" data-filter="desserts" aria-pressed="false">Desserts</button>
+        </div>
+        <label class="menu-search-label" for="menuSearch">Search the sample menu</label>
+        <div class="menu-search-wrap"><span aria-hidden="true">⌕</span><input id="menuSearch" class="menu-search" type="search" placeholder="Search dishes or ingredients" autocomplete="off"></div>
       </div>
-      <p class="menu-note">Menu highlights are illustrative. Please confirm current dishes and prices with the restaurant.</p>
+      <p class="menu-count" id="menuCount" aria-live="polite">Showing 8 sample dishes</p>
+      <div class="premium-menu-grid" id="menuItems">
+        <article class="menu-item" data-category="seafood" data-search="zanzibar coconut fish seafood grilled catch coconut lime pilipili">
+          <div class="menu-item-photo"><img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=85" alt="Grilled fish served with fresh herbs and lemon" loading="lazy"><span class="menu-category">Seafood</span></div>
+          <div class="menu-item-body"><h3>Zanzibar Coconut Fish</h3><p>Grilled fish with a gently spiced coconut sauce, lime and fresh herbs.</p><div class="menu-item-meta"><span class="sample-price">TSh XX,XXX <small>sample price</small></span><button class="enquiry-button" type="button" data-dish="Zanzibar Coconut Fish" aria-label="Enquire about Zanzibar Coconut Fish">Enquire <span aria-hidden="true">↗</span></button></div></div>
+        </article>
+        <article class="menu-item" data-category="seafood" data-search="charcoal prawns seafood grilled garlic lemon coastal">
+          <div class="menu-item-photo"><img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=900&q=85" alt="Grilled prawns with lemon and fresh seasoning" loading="lazy"><span class="menu-category">Seafood</span></div>
+          <div class="menu-item-body"><h3>Charcoal-Grilled Prawns</h3><p>Juicy prawns with a bright lemon and garlic marinade.</p><div class="menu-item-meta"><span class="sample-price">TSh XX,XXX <small>sample price</small></span><button class="enquiry-button" type="button" data-dish="Charcoal-Grilled Prawns" aria-label="Enquire about Charcoal-Grilled Prawns">Enquire <span aria-hidden="true">↗</span></button></div></div>
+        </article>
+        <article class="menu-item" data-category="swahili" data-search="zanzibar pilau rice spices cloves cinnamon swahili fragrant">
+          <div class="menu-item-photo"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85" alt="Fragrant spiced rice served with fresh herbs" loading="lazy"><span class="menu-category">Swahili</span></div>
+          <div class="menu-item-body"><h3>Zanzibar Pilau</h3><p>Fragrant rice simmered with warming island spices and herbs.</p><div class="menu-item-meta"><span class="sample-price">TSh XX,XXX <small>sample price</small></span><button class="enquiry-button" type="button" data-dish="Zanzibar Pilau" aria-label="Enquire about Zanzibar Pilau">Enquire <span aria-hidden="true">↗</span></button></div></div>
+        </article>
+        <article class="menu-item" data-category="swahili" data-search="swahili coconut bean curry maharage vegan rice traditional island">
+          <div class="menu-item-photo"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=85" alt="A bowl of richly spiced coconut curry" loading="lazy"><span class="menu-category">Swahili</span></div>
+          <div class="menu-item-body"><h3>Maharage ya Nazi</h3><p>Slow-cooked beans in a creamy coconut sauce with island spices.</p><div class="menu-item-meta"><span class="sample-price">TSh XX,XXX <small>sample price</small></span><button class="enquiry-button" type="button" data-dish="Maharage ya Nazi" aria-label="Enquire about Maharage ya Nazi">Enquire <span aria-hidden="true">↗</span></button></div></div>
+        </article>
+        <article class="menu-item" data-category="grill" data-search="grilled chicken skewers charcoal barbecue pili pili smoky chicken">
+          <div class="menu-item-photo"><img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=900&q=85" alt="Charcoal-grilled chicken skewers with herbs" loading="lazy"><span class="menu-category">Grill</span></div>
+          <div class="menu-item-body"><h3>Pili Pili Chicken Skewers</h3><p>Smoky chicken skewers with a bright, gently fiery pili pili glaze.</p><div class="menu-item-meta"><span class="sample-price">TSh XX,XXX <small>sample price</small></span><button class="enquiry-button" type="button" data-dish="Pili Pili Chicken Skewers" aria-label="Enquire about Pili Pili Chicken Skewers">Enquire <span aria-hidden="true">↗</span></button></div></div>
+        </article>
+        <article class="menu-item" data-category="vegetarian" data-search="vegetarian grilled vegetables garden salad plant based greens seasonal">
+          <div class="menu-item-photo"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85" alt="Colourful vegetarian salad with fresh vegetables" loading="lazy"><span class="menu-category">Vegetarian</span></div>
+          <div class="menu-item-body"><h3>Garden &amp; Grill Plate</h3><p>Seasonal vegetables, crisp greens and a citrus herb dressing.</p><div class="menu-item-meta"><span class="sample-price">TSh XX,XXX <small>sample price</small></span><button class="enquiry-button" type="button" data-dish="Garden & Grill Plate" aria-label="Enquire about Garden and Grill Plate">Enquire <span aria-hidden="true">↗</span></button></div></div>
+        </article>
+        <article class="menu-item" data-category="drinks" data-search="passion fruit cooler drink juice lime mint refreshing beverage passion">
+          <div class="menu-item-photo"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&fit=crop&w=900&q=85" alt="Refreshing fruit cooler with citrus and mint" loading="lazy"><span class="menu-category">Drinks</span></div>
+          <div class="menu-item-body"><h3>Passion Fruit Cooler</h3><p>A refreshing passion fruit cooler with lime and mint.</p><div class="menu-item-meta"><span class="sample-price">TSh XX,XXX <small>sample price</small></span><button class="enquiry-button" type="button" data-dish="Passion Fruit Cooler" aria-label="Enquire about Passion Fruit Cooler">Enquire <span aria-hidden="true">↗</span></button></div></div>
+        </article>
+        <article class="menu-item" data-category="desserts" data-search="mango coconut pudding dessert sweet tropical fruit vanilla">
+          <div class="menu-item-photo"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85" alt="Sweet tropical fruit dessert with cream" loading="lazy"><span class="menu-category">Desserts</span></div>
+          <div class="menu-item-body"><h3>Mango &amp; Coconut Pudding</h3><p>A cool, creamy pudding topped with ripe mango and toasted coconut.</p><div class="menu-item-meta"><span class="sample-price">TSh XX,XXX <small>sample price</small></span><button class="enquiry-button" type="button" data-dish="Mango & Coconut Pudding" aria-label="Enquire about Mango and Coconut Pudding">Enquire <span aria-hidden="true">↗</span></button></div></div>
+        </article>
+      </div>
+      <div class="menu-empty" id="menuEmpty" hidden><span aria-hidden="true">⌕</span><h3>No dishes found</h3><p>Try another search or choose a different category.</p><button class="clear-menu-search" type="button">Clear search and filters</button></div>
     </section>
 
     <section class="experience" id="about">
@@ -77,9 +108,9 @@
       <div class="section-title"><span></span><p class="eyebrow">A PLACE TO FEEL AT HOME</p><span></span></div>
       <h2>Good food. Easy company.<br><em>A little island magic.</em></h2>
       <div class="welcome-points">
-        <article><span class="point-mark">✳</span><h3>Come as you are</h3><p>Beach-day casual, family lunch or a catch-up with friends: there is room for your kind of day.</p></article>
-        <article><span class="point-mark">✳</span><h3>Stay a little longer</h3><p>Settle into the gentle pace of Paje and make a meal part of the memories you take home.</p></article>
-        <article><span class="point-mark">✳</span><h3>Follow your appetite</h3><p>Explore the food court and discover the flavours that make your visit your own.</p></article>
+        <article><span class="point-mark" aria-hidden="true"></span><h3>Come as you are</h3><p>Beach-day casual, family lunch or a catch-up with friends: there is room for your kind of day.</p></article>
+        <article><span class="point-mark" aria-hidden="true"></span><h3>Stay a little longer</h3><p>Settle into the gentle pace of Paje and make a meal part of the memories you take home.</p></article>
+        <article><span class="point-mark" aria-hidden="true"></span><h3>Follow your appetite</h3><p>Explore the food court and discover the flavours that make your visit your own.</p></article>
       </div>
     </section>
 
@@ -118,7 +149,7 @@
   </main>
 
   <footer class="footer">
-    <a class="brand footer-brand" href="#home"><span class="brand-mark">M<span>✳</span></span><span class="brand-name">MAPACHA<small>PAJE · ZANZIBAR</small></span></a>
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">M</span><span class="brand-name">MAPACHA<small>PAJE · ZANZIBAR</small></span></a>
     <p>A warm welcome on the coast.</p>
     <nav aria-label="Footer navigation"><a href="#about">Our place</a><a href="#menu">Menu</a><a href="#visit">Contact</a></nav>
     <small class="footer-note">Independent design concept · Confirm current menus, hours and booking arrangements with Mapacha.</small>
